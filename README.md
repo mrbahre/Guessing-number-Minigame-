@@ -8,4 +8,4 @@ What used
 * HTML
 * JavaScript
 
-(The WebSite)[https://mrbahre.github.io/Guessing-number-Minigame-/]
+[The WebSite](https://mrbahre.github.io/Guessing-number-Minigame-/)
