@@ -2,37 +2,37 @@
 
 
 function startGame() {
-    const target = Math.floor(Math.random() * 100 ) +1;
+    const target = Math.floor(Math.random() * 100) + 1;
     let attempts = 0;
 
-    console.log('welcom to guessing game');
-    console.log('i have chisen a number');
-    console.log('could youd guesse it');
+    console.log('Welcome to guessing game');
+    console.log('I have chosen a number');
+    console.log('Could you guess it?');
 
-    function guessNumber(){
-        const input = prompt('please guesse a number');
-        const guesse = Number( input);
+    function guessNumber() {
+        const input = prompt('Please guess a number');
+        const guess = Number(input);
         attempts++;
+
+        if (isNaN(guess) || guess < 1 || guess > 100) {
+            console.log('Please enter a valid number between 1 and 100');
+            guessNumber();
+            return;
+        }
+
+        if (guess === target) {
+            console.log(`Bingo! The number was ${target}, correct!`);
+            console.log(`You guessed it in ${attempts} attempts.`);
+        } else if (guess > target) {
+            console.log('Too high, try again');
+            guessNumber();
+        } else {
+            console.log('Too low, try again');
+            guessNumber();
+        }
     }
 
-    if (isNaN(guesse) || guesse<1 || guesse>100){
-     console.log('please enter a valid number');
-     guessNumber();
-     return;
-    }
-    
-     if (guesse === target){
-        console.log(`Bingoo, the number was ${target}, correct`)
-        console.log(`you guessed in ${attempts} attemps.`)
-     } else if (guesse > target){
-        console.log('so high, try again');
-        guessNumber();
-     } else{
-        console.log('low, try again');
-        guessNumber();
-    }
-  
     guessNumber();
-    
-
 }
+
+startGame();
