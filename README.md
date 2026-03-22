@@ -2,7 +2,7 @@
 ### One of my works
 
 
-The is on console page, so open it pleas before you join there 'F12'
+The game is on console page, so open it pleas before you join there 'F12'
 
 What used
 * HTML
